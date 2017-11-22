@@ -1,5 +1,7 @@
 # fancyBox
 
+[中文文档](https://github.com/kangkai124/fancybox/wiki)
+
 jQuery lightbox script for displaying images, videos and more.
 Touch enabled, responsive and fully customizable.
 
