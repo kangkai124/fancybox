@@ -43,14 +43,14 @@
 
 		body {
 			-webkit-text-size-adjust: none;
-			font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, Kaiti, sans-serif;
-			font-size: 18px;
+			font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+			font-size: 16px;
 			line-height: 1.6;
 			color: #333;
 		}
 
 		h1, h2, h3 {
-			font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, Kaiti, sans-serif;
+			font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 			font-weight: 700;
 			color: #333;
 		}
@@ -69,7 +69,7 @@
 		}
 
 		h1, h2, h3 {
-		    font-family: 'Montserrat', Kaiti, sans-serif;
+		    font-family: 'Montserrat', sans-serif;
 		    font-weight: 700;
 		    color: #333;
 		}
@@ -128,7 +128,7 @@
 		}
 
 		pre, code, .demo {
-			font-family: Consolas,"Liberation Mono",Kaiti,Courier,monospace;
+			font-family: Consolas,"Liberation Mono",Courier,monospace;
 		}
 
 		pre, code {
@@ -269,12 +269,12 @@
 
 	<header>
 		<div class="content">
-			<h1><a href="https://fancyapps.com/fancybox/3/">fancyBox3</a> 中文文档</h1>
+			<h1><a href="https://fancyapps.com/fancybox/3/">fancyBox3</a> Documentation</h1>
 
 			<ul>
-				<li><a href="https://fancyapps.com/fancybox/3/">主页</a></li>
-				<li><a href="https://fancyapps.com/fancybox/3/docs/">文档</a></li>
-				<li><a href="https://fancyapps.com/store/">商店</a></li>
+				<li><a href="https://fancyapps.com/fancybox/3/">Homepage</a></li>
+				<li><a href="https://fancyapps.com/fancybox/3/docs/">Documentation</a></li>
+				<li><a href="https://fancyapps.com/store/">Store</a></li>
 				<li><a href="https://github.com/fancyapps/fancybox">Github</a></li>
 			</ul>
 		</div>
@@ -284,23 +284,23 @@
 
 		<aside>
 			<ul class="sticky">
-				<li><a href="#introduction">介绍</a></li>
-				<li><a href="#setup">配置</a></li>
-				<li><a href="#usage">使用</a></li>
+				<li><a href="#introduction">Introduction</a></li>
+				<li><a href="#setup">Setup</a></li>
+				<li><a href="#usage">How to Use</a></li>
 				<li>
-					<a href="#media_types">媒体类型</a>
+					<a href="#media_types">Media types</a>
 
 					<ul>
-						<li><a href="#images">图片</a></li>
-						<li><a href="#inline">行内html</a></li>
+						<li><a href="#images">Images</a></li>
+						<li><a href="#inline">Inline</a></li>
 						<li><a href="#ajax">Ajax</a></li>
 						<li><a href="#iframe">Iframe</a></li>
 					</ul>
 				</li>
-				<li><a href="#embedding">嵌入</a></li>
-				<li><a href="#options">选项</a></li>
+				<li><a href="#embedding">Embedding</a></li>
+				<li><a href="#options">Options</a></li>
 				<li><a href="#api">Api</a></li>
-				<li><a href="#modules">模块</a></li>
+				<li><a href="#modules">Modules</a></li>
 				<li><a href="#faq">FAQ</a></li>
 			</ul>
 		</aside>
@@ -314,36 +314,38 @@
 	=====
 
 -->
-			<h2 id="introduction">介绍</h2>
+			<h2 id="introduction">Introduction</h2>
 
 			<p>
-				fancyBox 是一个 JavaScript 库，它以优雅的方式展示图片，视频和一些 html 内容。它包含你所期望的一切特性 —— 支持触屏，响应式和高度自定义。
+				fancyBox is a JavaScript library used to present images, videos and any html content in an elegant way.
+				It has all features you would expect - touch enabled, responsive and fully customizable.
 			<p>
 
 			</p>
 
 			<h3>
-				依赖
+				Dependencies
 			</h3>
 
 			<p>
-				 推荐 jQuery 3+，但是 fancyBox 仍支持 jQery 1.9.1+ 和 jQuery 2+ 。
+				 jQuery 3+ is preferred, but fancyBox works with jQuery 1.9.1+ and jQuery 2+
 			</p>
 
-			<h4 class="important">注意</h4>
+			<h4 class="important">Important</h4>
 
 			<p>
-				如果你在图片缩放时遇到了问题，请升级 jQuery 到最近版本（至少v3.2.1）。
+				If you experience issues with image zooming, then update jQuery to the latest (at least v3.2.1).
 			</p>
 
-			<h3>兼容</h3>
+			<h3>Compatibility</h3>
 
 			<p>
-				fancyBox 支持触屏操作，而且支持缩放等手势操作。在移动端和PC端上都十分合适。
+				fancyBox includes support for touch gestures and even supports pinch gestures for zooming.
+				It is perfectly suited for both mobile and desktop browsers.
 			</p>
 
 			<p>
-				fancyBox 已经在下列浏览器中测试：
+				fancyBox has been tested in following browsers/devices:
 			</p>
 
 			<ul>
@@ -360,10 +362,13 @@
 	=====
 
 -->
-			<h2 id="setup">配置</h2>
+			<h2 id="setup">Setup</h2>
 
 			<p>
-				可以在 html 文档中引入<code>.css</code>和<code>.js</code>来使用fancyBox，确保在这之前引入了 jQuery 库。下面是使用fancyBox的一个基本的HTML模板：
+				You can install fancyBox by linking <code>.css</code> and <code>.js</code> to your html file.
+
+				Make sure you also load the jQuery library.
+				Below is a basic HTML template to use as an example:
 			</p>
 
 			<pre>&lt;!DOCTYPE html&gt;
@@ -386,30 +391,32 @@
 &lt;/html&gt;
 </pre>
 
-			<h4 class="important">注意</h4>
+			<h4 class="important">Important</h4>
 
 			<ul>
-				<li>要先引入jQuery</li>
-				<li>如果页面中已经引入过jQuery，不能再次引入</li>
-				<li>不要同时引入 fancybox.js 和 fancybox.min.js</li>
+				<li>Make sure you add the jQuery library first</li>
+				<li>If you already have jQuery on your page, you shouldn't include it second time</li>
+				<li>Do not include both fancybox.js and fancybox.min.js files</li>
 				<li>
-					一些方法（ajax，iframes 等）必须在一个web服务器上才可以正常运行，在浏览器打开一个本地文件是无法正常工作的
+					Some functionality (ajax, iframes, etc) will not work
+					when you're opening local file directly on your browser,
+					the code must be running on a web server
 				</li>
 			</ul>
 
-			<h3>下载fancyBox</h3>
+			<h3>Download fancyBox</h3>
 
 			<p>
-				可以在 <a href="https://github.com/fancyapps/fancybox" target="_blank">GitHub</a> 下载最新的版本。
+				You can download the latest version of fancyBox on <a href="https://github.com/fancyapps/fancybox" target="_blank">GitHub</a>.
 				<br />
-				或者直接引用 cdnjs — <a href="https://cdnjs.com/libraries/fancybox" target="_blank">https://cdnjs.com/libraries/fancybox</a>.
+				Or just link directly to fancyBox files on cdnjs - <a href="https://cdnjs.com/libraries/fancybox" target="_blank">https://cdnjs.com/libraries/fancybox</a>.
 			</p>
 
 
-			<h3>包管理工具</h3>
+			<h3>Package Managers</h3>
 
 			<p>
-				fancyBox 还可以通多 npm 和 Bower安装。
+				fancyBox can also be installed via Bower or npm.
 			</p>
 
 <pre><code># NPM
@@ -426,12 +433,13 @@ bower install fancybox --save
 	==========
 
 -->
-			<h2 id="usage">使用</h2>
+			<h2 id="usage">How to Use</h2>
 
-			<h3>使用 data 属性初始化</h3>
+			<h3>Initialize with data attributes</h3>
 
 			<p>
-				最基本的用法是通过添加 <code>data-fancybox</code> 属性到一个超链接标签。标题可以通过 <code>data-caption</code> 添加。例如：
+				The most basic way to use fancyBox is by adding the <code>data-fancybox</code> attribute to a link.
+				A caption can be added using the <code>data-caption</code> attribute. Example:
 			</p>
 
 			<pre>&lt;a href="image.jpg" data-fancybox data-caption="My caption"&gt;
@@ -439,17 +447,18 @@ bower install fancybox --save
 &lt;/a&gt;</pre>
 
 			<p class="demo">
-				<a href="https://codepen.io/fancyapps/pen/rYLzBR?editors=1000" target="_blank">在 CodePen 上查看例子</a>
+				<a href="https://codepen.io/fancyapps/pen/rYLzBR?editors=1000" target="_blank">View demo on CodePen</a>
 			</p>
 
 			<p>
-				这种方式使用默认的配置，可以查看<a href="#options">选项</a>进行自定义配置，或者使用 <code>data-options</code> 属性。
+				If you choose this method, default settings will be applied.
+				See <a href="#options">Options</a> section for examples how to customize by changing defaults or using <code>data-options</code> attribute.
 			</p>
 
-			<h3>使用 JavaScript 初始化</h3>
+			<h3>Initialize with JavaScript</h3>
 
 			<p>
-				使用 jQuery 选择器选择一个元素，然后调用 <code>fancybox</code> 方法：
+				Select elements with a jQuery selector and call the <code>fancybox</code> method:
 			</p>
 
 			<pre><code>&lt;script type=&quot;text/javascript&quot;&gt;
@@ -459,13 +468,13 @@ bower install fancybox --save
 &lt;/script&gt;</code></pre>
 
 			<p class="demo">
-				<a href="https://codepen.io/fancyapps/pen/JOKyYo?editors=1010" target="_blank">在 CodePen 上查看例子</a>
+				<a href="https://codepen.io/fancyapps/pen/JOKyYo?editors=1010" target="_blank">View demo on CodePen</a>
 			</p>
 
 			<p>
-				使用这种方式，只有被选中的元素才可以触发点击事件。
+				Using this method, click event handler is attached only to the currently selected elements.
 				<br />
-				为了可以现在或之后存在的元素都可以触发点击事件，使用 <code>selector</code> 选项。例如：
+				To attach click event listener for elements that exist now or in the future, use <code>selector</code> option. Example:
 			</p>
 
 			<pre><code>$().fancybox({
@@ -474,29 +483,32 @@ bower install fancybox --save
 });</code></pre>
 
 			<p class="demo">
-				<a href="https://codepen.io/fancyapps/pen/zPBEdz?editors=1010" target="_blank">在 CodePen 上查看例子</a>
+				<a href="https://codepen.io/fancyapps/pen/zPBEdz?editors=1010" target="_blank">View demo on CodePen</a>
 			</p>
 
-			<h3>手动调用 fancyBox</h3>
+			<h3>Manual calling of fancyBox</h3>
 
 			<p>
-				fancyBox 允许使用 JavaScrip t以任意形式触发，因此不必需要通过某一个元素触发。下面例子为展示一段简单的信息：
+				fancyBox can be activated at any point within Javascript and therefore does not necessarily need a trigger element.
+
+				Example of displaying a simple message:
 			</p>
 
 			<pre><code>$.fancybox.open('&lt;div class=&quot;message&quot;&gt;&lt;h2&gt;Hello!&lt;/h2&gt;&lt;p&gt;You are awesome!&lt;/p&gt;&lt;/div&gt;');</code></pre>
 
 			<p class="demo">
-				<a href="https://codepen.io/fancyapps/pen/xPOLVb?editors=1010" target="_blank">在 CodePen 上查看例子</a>
+				<a href="https://codepen.io/fancyapps/pen/xPOLVb?editors=1010" target="_blank">View demo on CodePen</a>
 			</p>
 
 			<p>
-				通过 <a href="#api">API</a> 查看更多的信息和例子。
+				See <a href="#api">API</a> section for more information and examples.
 			</p>
 
-			<h3>分组</h3>
+			<h3>Grouping</h3>
 
 			<p>
-				如果你有一组元素，组内元素使用相同的 <code>data-fancybox</code> 值就可以组成一个相册。不同的组应该使用不同的属性值加以区分。
+				If you have a group of items, you can use the same attribute <code>data-fancybox</code> value for each of them to create a gallery.
+				Each group should have a unique value:
 			</p>
 
 <pre>&lt;a href="image_1.jpg" data-fancybox="group" data-caption="Caption #1"&gt;
@@ -509,13 +521,15 @@ bower install fancybox --save
 </pre>
 
 			<p class="demo">
-				<a href="https://codepen.io/fancyapps/pen/qVNXrZ?editors=1000" target="_blank">在 CodePen 上查看例子</a>
+				<a href="https://codepen.io/fancyapps/pen/qVNXrZ?editors=1000" target="_blank">View demo on CodePen</a>
 			</p>
 
-			<h4 class="important">注意</h4>
+			<h4 class="important">Important</h4>
 
 			<p>
-				fancyBox根据给定的url自己尝试检测内容的类型。如果无法检测，该类型可以使用 <code>data-type</code> 属性手动添加。
+				fancyBox attempts to automatically detect the type of content based on the given url.
+
+				If it cannot be detected, the type can also be set manually using <code>data-type</code> attribute:
 
 				<pre>&lt;a href="images.php?id=123" data-type="image" data-caption="Caption"&gt;
 	Show image
@@ -530,13 +544,13 @@ bower install fancybox --save
 	=========
 
 -->
-			<h2 id="media_types">媒体类型</h2>
+			<h2 id="media_types">Media types</h2>
 
 
-			<h3 id="images">图片</h3>
+			<h3 id="images">Images</h3>
 
 			<p>
-				使用 fancyBox 的标准做法是用小尺寸的图片链接到大尺寸图片：
+				The standard way of using fancyBox is with a number of thumbnail images that link to larger images:
 			</p>
 
 			<pre><code>&lt;a href="image.jpg" data-fancybox="images" data-caption="My caption"&gt;
@@ -544,39 +558,43 @@ bower install fancybox --save
 &lt;/a&gt;</code></pre>
 
 			<p class="demo">
-				<a href="https://codepen.io/fancyapps/pen/mqEMGX?editors=1000" target="_blank">在 CodePen 上查看例子</a>
+				<a href="https://codepen.io/fancyapps/pen/mqEMGX?editors=1000" target="_blank">View demo on CodePen</a>
 			</p>
 
 			<p>
-				默认情况下，fancyBox 会在一张图片展示前进行预加载。你可以选择立即显示图片，这样当加载完成后会马上渲染和显示完整尺寸的图片。不过，以下属性是必须添加的：
+				By default, fancyBox fully preloads an image before displaying it.
+				You can choose to display the image right away.
+				It will render and show the full size image while the data is being received.
+				To do so, some attributes are necessary:
 			</p>
 
 			<ul>
-				<li><code>data-width</code>  - 图片的完整宽度</li>
-				<li><code>data-height</code> - 图片的完整高度</li>
+				<li><code>data-width</code>  - the real width of the image</li>
+				<li><code>data-height</code> - the real height of the image</li>
 			</ul>
 
 			<pre><code>&lt;a href=&quot;image.jpg&quot; data-fancybox=&quot;images&quot; data-width=&quot;2048&quot; data-height=&quot;1365&quot;&gt;
     &lt;img src=&quot;thumbnail.jpg&quot; /&gt;
 &lt;/a&gt;</code></pre>
 			<p class="demo">
-				<a href="https://codepen.io/fancyapps/pen/JOKywE?editors=1000" target="_blank">在 CodePen 上查看例子</a>
+				<a href="https://codepen.io/fancyapps/pen/JOKywE?editors=1000" target="_blank">View demo on CodePen</a>
 			</p>
 
 			<p>
-				fancyBox 支持 "scrset"，它的作用是根据不同的可视区域显示不同尺寸的图片。你可以使用这个属性来减少移动端用户的下载时间。例如：
+				fancyBox supports "scrset" so I can display different images based on viewport width. You can use this to improve download times for mobile users and over time save bandwidth.
+				Example:
 			</p>
 
 			<pre><code>&lt;a href=&quot;medium.jpg&quot; data-fancybox=&quot;images&quot; data-srcset=&quot;large.jpg 1600w, medium.jpg 1200w, small.jpg 640w&quot;&gt;
 	&lt;img src=&quot;thumbnail.jpg&quot; /&gt;
 &lt;/a&gt;</code></pre>
 			<p class="demo">
-				<a href="https://codepen.io/fancyapps/pen/gXMxJj?editors=1000" target="_blank">在 CodePen 上查看例子</a>
+				<a href="https://codepen.io/fancyapps/pen/gXMxJj?editors=1000" target="_blank">View demo on CodePen</a>
 			</p>
 
 			<p>
-				fancyBox 还支持禁止右键下载来保护图片。
-				当然这无法阻止那些下定决心下载的用户，但是可以让大多数想要盗取你文件的用户打消这个念头。
+				It is also possible to protect images from downloading by right-click.
+				While this does not protect from truly determined users, it should discourage the vast majority from ripping off your files.
 			</p>
 
 			<pre><code>$('[data-fancybox]').fancybox({
@@ -584,13 +602,13 @@ bower install fancybox --save
 });</code></pre>
 
 			<p class="demo">
-				<a href="https://codepen.io/fancyapps/pen/rYLGBe" target="_blank">在 CodePen 上查看例子</a>
+				<a href="https://codepen.io/fancyapps/pen/rYLGBe" target="_blank">View demo on CodePen</a>
 			</p>
 
-			<h3 id="inline">行内 HTML</h3>
+			<h3 id="inline">Inline HTML</h3>
 
 			<p>
-				对于行内元素，你需要创建一个隐藏的元素并添加独特的 id 属性：
+				For inline content, create a hidden element with unique id:
 			</p>
 
 			<pre><code>&lt;div style=&quot;display: none;&quot; id=&quot;hidden-content&quot;&gt;
@@ -599,35 +617,36 @@ bower install fancybox --save
 &lt;/div&gt;</code></pre>
 
 			<p>
-				然后只需要创建一个带有 <code>data-src</code> 属性的超链接，该属性值匹配之前隐藏元素的id（优先使用# ）：
+				And then simply create a link having <code>data-src</code> attribute that matches ID of the element you want to open (preceded by a hash mark (#); in this example - <code>#hidden-content</code>):
 			</p>
 
 			<pre><code>&lt;a data-fancybox data-src=&quot;#hidden-content&quot; href=&quot;javascript:;&quot;&gt;
 	Trigger the fancyBox
 &lt;/a&gt;</code></pre>
 			<p class="demo">
-				<a href="https://codepen.io/fancyapps/pen/OOXxLa" target="_blank">在 CodePen 上查看例子</a>
+				<a href="https://codepen.io/fancyapps/pen/OOXxLa" target="_blank">View demo on CodePen</a>
 			</p>
 
 			<p>
-				这段代码会产生一个关闭按钮（如果你没有通过 <code>smallBtn:false</code> 禁用的话），这个按钮只设置了居中。因此你可以很轻松地通过css来自定义样式。
+				The script will append small close button (if you have not disabled by <code>smallBtn:false</code>)
+				and will not apply any styles except for centering. Therefore you can easily set custom dimensions using CSS.
 			</p>
 
 			<h3 id="ajax">Ajax</h3>
 
 			<p>
-				想要通过 Ajax 加载内容，需要在超链接添加 <code>data-type="ajax"</code> 属性：
+				To load content via AJAX, you need to add a <code>data-type="ajax"</code> attribute to your link:
 			</p>
 
 			<pre><code>&lt;a data-fancybox data-type=&quot;ajax&quot; data-src=&quot;my_page.com/path/to/ajax/&quot; href=&quot;javascript:;&quot;&gt;
 	AJAX content
 &lt;/a&gt;</code></pre>
 			<p class="demo">
-				<a href="https://codepen.io/fancyapps/pen/qVNPEX?editors=1100" target="_blank">在 CodePen 上查看例子</a>
+				<a href="https://codepen.io/fancyapps/pen/qVNPEX?editors=1100" target="_blank">View demo on CodePen</a>
 			</p>
 
 			<p>
-				另外，可以使用 <code>data-filter</code> 属性定义一个选择器，来显示响应的一部分。这个选择器需要是一个合法的 jQuery 选择器：
+				Additionally it is possible to define a selector with the <code>data-filter</code> attribute to show only a part of the response. The selector can be any string, that is a valid jQuery selector:
 			</p>
 
 			<pre><code>&lt;a data-fancybox data-type=&quot;ajax&quot; data-src=&quot;my_page.com/path/to/ajax/&quot; data-filter=&quot;#two&quot; href=&quot;javascript:;&quot;&gt;
@@ -635,13 +654,14 @@ bower install fancybox --save
 &lt;/a&gt;
 </code></pre>
 			<p class="demo">
-				<a href="https://codepen.io/fancyapps/pen/QOEqwe?editors=1100" target="_blank">在 CodePen 上查看例子</a>
+				<a href="https://codepen.io/fancyapps/pen/QOEqwe?editors=1100" target="_blank">View demo on CodePen</a>
 			</p>
 
 			<h3 id="iframe">Iframe</h3>
 
 			<p>
-				如果内容可以展示在页面，并且放在 iframe 中不会被脚本或者安全策略禁止，它就可以在 fancyBox 中展示：
+				If the content can be shown on a page, and placement in an iframe is not blocked by script or security configuration of that page,
+				it can be presented in a fancyBox:
 			</p>
 
 			<pre><code>&lt;a data-fancybox data-type="iframe" data-src=&quot;http://codepen.io/fancyapps/full/jyEGGG/&quot; href=&quot;javascript:;&quot;&gt;
@@ -653,23 +673,23 @@ bower install fancybox --save
 &lt;/a&gt;
 </code></pre>
 			<p class="demo">
-				<a href="https://codepen.io/fancyapps/pen/dZXVoJ?editors=1000" target="_blank">在 CodePen 上查看例子</a>
+				<a href="https://codepen.io/fancyapps/pen/dZXVoJ?editors=1000" target="_blank">View demo on CodePen</a>
 			</p>
 
 
 			<p>
-				如果嵌入了 iframe，可以从父容器中访问和控制 fancyBox：
+				To access and control fancyBox in parent window from inside an iframe:
 			</p>
 
-			<pre><code>// 根据内容调整 iframe 的高度
+			<pre><code>// Adjust iframe height according to the contents
 parent.jQuery.fancybox.getInstance().update();
 
-// 关闭当前的 fancyBox 实例
+// Close current fancyBox instance
 parent.jQuery.fancybox.getInstance().close();</code></pre>
 
 
 			<p>
-				Iframe 尺寸可以通多 CSS 调整：
+				Iframe dimensions can be controlled by CSS:
 			</p>
 
 			<pre><code>.fancybox-slide--iframe .fancybox-content {
@@ -682,7 +702,7 @@ parent.jQuery.fancybox.getInstance().close();</code></pre>
 
 
 			<p>
-				如果需要的话，CSS 样式可以被 JS 覆盖：
+				These CSS rules can be overridden by JS, if needed:
 			</p>
 
 			<pre><code>$(&quot;[data-fancybox]&quot;).fancybox({
@@ -695,13 +715,14 @@ parent.jQuery.fancybox.getInstance().close();</code></pre>
 
 
 			<p>
-				如果你没有禁止 iframe 的预加载（使用 <code>preload</code> ），那么fancyBox会尝试计算内容的尺寸，
-				并且会根据内容来调整 iframe 的宽高。注意，这依赖于<a href="https://en.wikipedia.org/wiki/Same-origin_policy" target="_blank">同源策略</a>，
-				因此会有一些限制。
+				If you have not disabled iframe preloading (using <code>preload</code> option), then the script will atempt to
+				calculate content dimensions and will adjust width/height of iframe to fit with content in it.
+				Keep in mind, that due to <a href="https://en.wikipedia.org/wiki/Same-origin_policy" target="_blank">same origin policy</a>,
+				there are some limitations.
 			</p>
 
 			<p>
-				下面这个例子禁止了 iframe 的预加载，并且用取消按钮代替了工具栏。
+				This example will disable iframe preloading and will display small close button next to iframe instead of the toolbar:
 			</p>
 
 			<pre><code>$('[data-fancybox]').fancybox({
@@ -713,7 +734,7 @@ parent.jQuery.fancybox.getInstance().close();</code></pre>
 })
 </code></pre>
 			<p class="demo">
-				<a href="https://codepen.io/fancyapps/pen/rYLGeM?editors=1010" target="_blank">在 CodePen 上查看例子</a>
+				<a href="https://codepen.io/fancyapps/pen/rYLGeM?editors=1010" target="_blank">View demo on CodePen</a>
 			</p>
 
 
@@ -723,10 +744,10 @@ parent.jQuery.fancybox.getInstance().close();</code></pre>
 	=======
 
 -->
-			<h2 id="embedding">嵌入</h2>
+			<h2 id="embedding">Embedding</h2>
 
 			<p>
-				支持的网站可以展示在 fancyBox 中，只需要提供页面的地址即可：
+				Supported sites can be used with fancyBox by just providing the page URL:
 			</p>
 
 			<pre><code>&lt;a data-fancybox href="https://www.youtube.com/watch?v=_sI_Ps7JSEk"&gt;
@@ -745,13 +766,13 @@ parent.jQuery.fancybox.getInstance().close();</code></pre>
 	Instagram photo
 &lt;/a&gt;</code></pre>
 			<p class="demo">
-				<a href="https://codepen.io/fancyapps/pen/zPBEBN?editors=1000" target="_blank">在 CodePen 上查看例子</a>
+				<a href="https://codepen.io/fancyapps/pen/zPBEBN?editors=1000" target="_blank">View demo on CodePen</a>
 			</p>
 
-			<h3>视频尺寸</h3>
+			<h3>Video dimensions</h3>
 
 			<p>
-				通过 CSS 调整视频的显示大小：
+				Resize video display with the following CSS:
 			</p>
 
 			<pre><code>.fancybox-slide--video .fancybox-content {
@@ -761,21 +782,21 @@ parent.jQuery.fancybox.getInstance().close();</code></pre>
 	max-height : 80%;
 }</code></pre>
 			<p class="demo">
-				<a href="https://codepen.io/fancyapps/pen/YEWrWL?editors=1100" target="_blank">在 CodePen 上查看例子</a>
+				<a href="https://codepen.io/fancyapps/pen/YEWrWL?editors=1100" target="_blank">View demo on CodePen</a>
 			</p>
 
 			<p>
-				显然，你可以选择你喜欢的尺寸。
+				Obviously, you can choose any size you like, any combination with <code>min</code>/<code>max</code> values.
 				<br />
-				部分未支持的画面比例，<a href="https://codepen.io/fancyapps/pen/NgKNRz?editors=1010" target="_blank">可以参照这个方法</a>。
+				Aspect ratio lock for videos is not implemented yet, but if you wish, <a href="https://codepen.io/fancyapps/pen/NgKNRz?editors=1010" target="_blank">you can use this snippet</a>.
 			</p>
 
 
 
-			<h3>视频参数</h3>
+			<h3>Video parameters</h3>
 
 			<p>
-				通过 url 中的参数控制视频：
+				Controlling a video via URL parameters:
 			</p>
 
 			<pre><code>&lt;a data-fancybox href=&quot;https://www.youtube.com/watch?v=_sI_Ps7JSEk&amp;amp;autoplay=1&amp;amp;rel=0&amp;amp;controls=0&amp;amp;showinfo=0&quot;&gt;
@@ -786,12 +807,12 @@ parent.jQuery.fancybox.getInstance().close();</code></pre>
   Vimeo video - custom color
 &lt;/a&gt;</code></pre>
 			<p class="demo">
-				<a href="http://codepen.io/fancyapps/pen/ooLGzE?editors=1000" target="_blank">在 CodePen 上查看例子</a>
+				<a href="http://codepen.io/fancyapps/pen/ooLGzE?editors=1000" target="_blank">View demo on CodePen</a>
 			</p>
 
 
 			<p>
-				通过 JavaScript 控制视频：
+				Via JavaScript:
 			</p>
 
 			<pre><code>$('[data-fancybox]').fancybox({
@@ -804,7 +825,7 @@ parent.jQuery.fancybox.getInstance().close();</code></pre>
 	}
 });</code></pre>
 			<p class="demo">
-				<a href="http://codepen.io/fancyapps/pen/xPOXRL?editors=1010" target="_blank">在 CodePen 上查看例子</a>
+				<a href="http://codepen.io/fancyapps/pen/xPOXRL?editors=1010" target="_blank">View demo on CodePen</a>
 			</p>
 
 <!--
@@ -813,37 +834,38 @@ parent.jQuery.fancybox.getInstance().close();</code></pre>
 	=======
 
 -->
-			<h2 id="options">选项</h2>
+			<h2 id="options">Options</h2>
 
 			<p>
-				默认选项值快速参考：
+				Quick reference for all default options as defined in the source:
 			</p>
 
 			<pre>var defaults = {
 
-    // 相册循环浏览
+    // Enable infinite gallery navigation
     loop : false,
 
-    // 图片周围的margin，如果视口（viewport）宽度小于800px则忽略
+    // Space around image, ignored if zoomed-in or viewport width is smaller than 800px
     margin : [44, 0],
 
-    // 侧边栏里的水平间距
+    // Horizontal space between slides
     gutter : 50,
 
-    // 键盘浏览
+    // Enable keyboard navigation
     keyboard : true,
 
-    // 是否在屏幕边缘显示箭头
+    // Should display navigation arrows at the screen edges
     arrows : true,
 
-    // 是否显示infobar (顶部的counter and arrows)
+    // Should display infobar (counter and arrows at the top)
     infobar : true,
 
-    // 是否显示顶部的toolbar
+    // Should display toolbar (buttons at the top)
     toolbar : true,
 
-    // 控制顶部toolbar里显示的图表
-    // 通过`btnTpl`选项的模板创建按钮，并被放置在toolbar(class="fancybox-toolbar"`的元素)中
+    // What buttons should appear in the top right corner.
+    // Buttons will be created using templates from `btnTpl` option
+    // and they will be placed into toolbar (class=&quot;fancybox-toolbar&quot;` element)
     buttons : [
         'slideShow',
         'fullScreen',
@@ -854,35 +876,36 @@ parent.jQuery.fancybox.getInstance().close();</code></pre>
         'close'
     ],
 
-    // 探测"idle"的时间(秒)
+    // Detect &quot;idle&quot; time in seconds
     idleTime : 3,
 
-		// 是否在右上角显示关闭按钮
-  	// 如果设置为'auto',遇到内容类型为html,inline,ajax时显示
+    // Should display buttons at top right corner of the content
+    // If 'auto' - they will be created for content having type 'html', 'inline' or 'ajax'
     // Use template from `btnTpl.smallBtn` for customization
     smallBtn : 'auto',
 
-    // 保护文件，禁止右键下载
+    // Disable right-click and use simple image protection for images
     protect : false,
 
-    // Shortcut to make content &quot;modal&quot; - 禁止键盘浏览，隐藏按钮等
+    // Shortcut to make content &quot;modal&quot; - disable keyboard navigtion, hide buttons, etc
     modal : false,
 
     image : {
 
-			// 预加载
-			// 需要预定义图片的尺寸
-			// 设置为'auto'，自动在预览图中缩放
+        // Wait for images to load before displaying
+        // Requires predefined image dimensions
+        // If 'auto' - will zoom in thumbnail if 'width' and 'height' attributes are found
         preload : &quot;auto&quot;
 
     },
 
     ajax : {
 
-        // 请求 ajax 的配置
+        // Object containing settings for ajax request
         settings : {
 
-            // 表明请求是从模态框中发起，名字可改
+            // This helps to indicate that request comes from the modal
+            // Feel free to change naming
             data : {
                 fancybox : true
             }
@@ -892,29 +915,30 @@ parent.jQuery.fancybox.getInstance().close();</code></pre>
 
     iframe : {
 
-        // Iframe 模板
+        // Iframe template
         tpl : '&lt;iframe id=&quot;fancybox-frame{rnd}&quot; name=&quot;fancybox-frame{rnd}&quot; class=&quot;fancybox-iframe&quot; frameborder=&quot;0&quot; vspace=&quot;0&quot; hspace=&quot;0&quot; webkitAllowFullScreen mozallowfullscreen allowFullScreen allowtransparency=&quot;true&quot; src=&quot;&quot;&gt;&lt;/iframe&gt;',
 
-				// 预加载
-        // 由于同源策略，不能加载跨域数据
+        // Preload iframe before displaying it
+        // This allows to calculate iframe content width and height
+        // (note: Due to &quot;Same Origin Policy&quot;, you can't get cross domain data).
         preload : true,
 
-				// 自定义包裹 iframe 的元素的 CSS 样式
-      	// 这样就可以自定义 iframe 的尺寸
+        // Custom CSS styling for iframe wrapping element
+        // You can use this to set custom iframe dimensions
         css : {},
 
-        // iframe 标签属性
+        // Iframe tag attributes
         attr : {
             scrolling : 'auto'
         }
 
     },
 
-    // 如果内容类型不能自动检测出来，默认值为'image'
+    // Default content type if cannot be detected automatically
     defaultType : 'image',
 
-		// 打开/关闭动画类型
-    // 可用的值:
+    // Open/close animation type
+    // Possible values:
     //   false            - disable
     //   &quot;zoom&quot;           - zoom images from/to thumbnail
     //   &quot;fade&quot;
@@ -922,16 +946,16 @@ parent.jQuery.fancybox.getInstance().close();</code></pre>
     //
     animationEffect : &quot;zoom&quot;,
 
-		// 打开/关闭动画使用的时间，ms
+    // Duration in ms for open/close animation
     animationDuration : 500,
 
-    // 图片缩放时是够改变透明度
-  	// 如果透明度为'auto'，那么图片和缩略图比例不一致时透明度将会发生改变
-    zoomOpacity : "auto",
+    // Should image change opacity while zooming
+    // If opacity is &quot;auto&quot;, then opacity will be changed if image and thumbnail have different aspect ratios
+    zoomOpacity : &quot;auto&quot;,
 
-		// 滑块动画
+    // Transition effect between slides
     //
-    // 可用的值:
+    // Possible values:
     //   false            - disable
     //   &quot;fade'
     //   &quot;slide'
@@ -942,16 +966,16 @@ parent.jQuery.fancybox.getInstance().close();</code></pre>
     //
     transitionEffect : &quot;fade&quot;,
 
-		// 动画持续时间，ms
+    // Duration in ms for transition animation
     transitionDuration : 366,
 
-    // 自定义的滑块的 class 值
+    // Custom CSS class for slide element
     slideClass : '',
 
-    // 自定义的布局的 class 值
+    // Custom CSS class for layout
     baseClass : '',
 
-    // 布局的模板
+    // Base template for layout
     baseTpl	:
         '&lt;div class=&quot;fancybox-container&quot; role=&quot;dialog&quot; tabindex=&quot;-1&quot;&gt;' +
             '&lt;div class=&quot;fancybox-bg&quot;&gt;&lt;/div&gt;' +
@@ -966,11 +990,11 @@ parent.jQuery.fancybox.getInstance().close();</code></pre>
             '&lt;/div&gt;' +
         '&lt;/div&gt;',
 
-				// 加载中时的模板
-		    spinnerTpl : '<div class="fancybox-loading"></div>',
+    // Loading indicator template
+    spinnerTpl : '&lt;div class=&quot;fancybox-loading&quot;&gt;&lt;/div&gt;',
 
-		    // 错误时的模板
-		    errorTpl : '<div class="fancybox-error"><p>{{ERROR}}<p></div>',
+    // Error message template
+    errorTpl : '&lt;div class=&quot;fancybox-error&quot;&gt;&lt;p&gt;{{ERROR}}&lt;p&gt;&lt;/div&gt;',
 
     btnTpl : {
 
@@ -992,7 +1016,8 @@ parent.jQuery.fancybox.getInstance().close();</code></pre>
                     '&lt;/svg&gt;' +
                 '&lt;/button&gt;',
 
-        // 如果'smallBtn'没有设置为 false，默认关闭按钮将会被放置在你的 html/inline/ajax 内容中
+        // This small close button will be appended to your html/inline/ajax content by default,
+        // if &quot;smallBtn&quot; option is not set to false
         smallBtn   : '&lt;button data-fancybox-close class=&quot;fancybox-close-small&quot; title=&quot;{{CLOSE}}&quot;&gt;&lt;/button&gt;',
 
         // Arrows
@@ -1009,42 +1034,42 @@ parent.jQuery.fancybox.getInstance().close();</code></pre>
                     '&lt;/button&gt;'
     },
 
-    // 模态框放置在哪个节点中
+    // Container is injected into this element
     parentEl : 'body',
 
 
-    // 焦点处理
+    // Focus handling
     // ==============
 
-		// 打开后焦点在第一个支持焦点的元素上
+    // Try to focus on the first focusable element after opening
     autoFocus : false,
 
-    // 关闭后焦点回到 active 的元素上
+    // Put focus back to active element after closing
     backFocus : true,
 
-    // 不让用户焦点放在模态框外的内容中
+    // Do not let user to focus on element outside modal content
     trapFocus : true,
 
 
-    // 模态框配置
+    // Module specific options
     // =======================
 
     fullScreen : {
         autoStart : false,
     },
 
-		// 设置 `touch: false` 来禁止拖拽/手指滑动
+    // Set `touch: false` to disable dragging/swiping
     touch : {
-        vertical : true,  // 允许垂直方向拖拽
+        vertical : true,  // Allow to drag content vertically
         momentum : true   // Continue movement after releasing mouse/touch when panning
     },
 
-    // 手动初始化时的 hash 值,
-    // 设为 `false` 不改变 hash
+    // Hash value when initializing manually,
+    // set `false` to disable hash change
     hash : null,
 
-    // 自定义或者添加媒体类型
-    // 例如:
+    // Customize or add new media types
+    // Example:
     /*
     media : {
         youtube : {
@@ -1062,21 +1087,21 @@ parent.jQuery.fancybox.getInstance().close();</code></pre>
     },
 
     thumbs : {
-        autoStart   : false,                  // 打开的时候展示缩略图
-        hideOnClose : true,                   // 关闭动画开始时隐藏缩略图轮廓
+        autoStart   : false,                  // Display thumbnails on opening
+        hideOnClose : true,                   // Hide thumbnail grid when closing animation starts
         parentEl    : '.fancybox-container',  // Container is injected into this element
-        axis        : 'y'                     // 垂直 (y) or 水平 (x) 滚动
+        axis        : 'y'                     // Vertical (y) or horizontal (x) scrolling
     },
 
-		// 使用鼠标滚轮来浏览相册
-    // 设为 'auto' - 只对图片启用
+    // Use mousewheel to navigate gallery
+    // If 'auto' - enabled for images only
     wheel : 'auto',
 
-    // 回调函数
+    // Callbacks
     //==========
 
-		// 更多信息请查看 API
-    // 例如:
+    // See Documentation/API/Events for more information
+    // Example:
     /*
         afterShow: function( instance, current ) {
              console.info( 'Clicked element:' );
@@ -1084,28 +1109,28 @@ parent.jQuery.fancybox.getInstance().close();</code></pre>
         }
     */
 
-		onInit       : $.noop,  // 实例初始化完成
+    onInit       : $.noop,  // When instance has been initialized
 
-    beforeLoad   : $.noop,  // 侧栏的内容正在被加载
-    afterLoad    : $.noop,  // 侧栏的内容加载完成后
+    beforeLoad   : $.noop,  // Before the content of a slide is being loaded
+    afterLoad    : $.noop,  // When the content of a slide is done loading
 
-    beforeShow   : $.noop,  // 打开动画开始前
-    afterShow    : $.noop,  // 内容加载完成，进行动画的时候
+    beforeShow   : $.noop,  // Before open animation starts
+    afterShow    : $.noop,  // When content is done loading and animating
 
-    beforeClose  : $.noop,  // 实例准备关闭的时候，返回 false 值取消关闭
-    afterClose   : $.noop,  // 实例关闭后
+    beforeClose  : $.noop,  // Before the instance attempts to close. Return false to cancel the close.
+    afterClose   : $.noop,  // After instance has been closed
 
-    onActivate   : $.noop,  // 实例激活的时候
-    onDeactivate : $.noop,  // 其他实例被激活的时候
+    onActivate   : $.noop,  // When instance is brought to front
+    onDeactivate : $.noop,  // When other instance has been activated
 
 
-		// 交互
+    // Interaction
     // ===========
 
-    // 使用一下选项自定义用户单击双击等事件
-    // 每个选项可以是字符串，或者有返回值的方法
+    // Use options below to customize taken action when user clicks or double clicks on the fancyBox area,
+    // each option can be string or method that returns value.
     //
-    // 可用的值:
+    // Possible values:
     //   &quot;close&quot;           - close instance
     //   &quot;next&quot;            - move to next gallery item
     //   &quot;nextOrClose&quot;     - move to next gallery item or close if gallery has only one item
@@ -1113,24 +1138,24 @@ parent.jQuery.fancybox.getInstance().close();</code></pre>
     //   &quot;zoom&quot;            - zoom image (if loaded)
     //   false             - do nothing
 
-     // 内容被点击
+    // Clicked on the content
     clickContent : function( current, event ) {
         return current.type === 'image' ? 'zoom' : false;
     },
 
-    // 侧边栏被点击
+    // Clicked on the slide
     clickSlide : 'close',
 
-    // 点击模态框外的背景时
+    // Clicked on the background (backdrop) element
     clickOutside : 'close',
 
-    // 同之前的两个一样，只是是双击的时候
+    // Same as previous two, but for double click
     dblclickContent : false,
     dblclickSlide   : false,
     dblclickOutside : false,
 
 
-    // 移动端事件
+    // Custom options when mobile device is detected
     // =============================================
 
     mobile : {
@@ -1152,7 +1177,7 @@ parent.jQuery.fancybox.getInstance().close();</code></pre>
     },
 
 
-    // 国际化
+    // Internationalization
     // ============
 
     lang : 'en',
@@ -1190,7 +1215,7 @@ parent.jQuery.fancybox.getInstance().close();</code></pre>
 
 
 				<p>
-					通过传入 <code>fancybox()</code> 方法一个对象来设置一个实例：
+					Set instance options by passing a valid object to <code>fancybox()</code> method:
 				</p>
 
 				<pre><code>$(&quot;[data-fancybox]&quot;).fancybox({
@@ -1201,16 +1226,17 @@ parent.jQuery.fancybox.getInstance().close();</code></pre>
 
 
 				<p>
-					可以通过 <code>$.fancybox.defaults</code> 命名空间修改 fancyBox 的默认选项：
+					Plugin options / defaults are exposed in <code>$.fancybox.defaults</code> namespace so you can easily adjust them globally:
 
 				</p>
 
 				<pre><code>$.fancybox.defaults.animationEffect = "fade";</code></pre>
 
 				<p>
-					对于单独的元素可以通过 <code>data-options</code> 属性进行自定义。
+					Custom options for each element individually can be set by adding a <code>data-options</code>
+					attribute to the element.
 
-					这个属性值要求JSON格式的对象：
+					This attribute should contain the properly formatted JSON object:
 				</p>
 
 				<pre><code>&lt;a data-fancybox data-options='{&quot;caption&quot; : &quot;My caption&quot;, &quot;src&quot; : &quot;https://codepen.io/about/&quot;, &quot;type&quot; : &quot;iframe&quot;}' href=&quot;javascript:;&quot; class=&quot;btn&quot;&gt;
@@ -1218,7 +1244,7 @@ parent.jQuery.fancybox.getInstance().close();</code></pre>
 &lt;/a&gt;
 </code></pre>
 				<p class="demo">
-					<a href="https://codepen.io/fancyapps/pen/zPBEww?editors=1000" target="_blank">在 CodePen 上查看例子</a>
+					<a href="https://codepen.io/fancyapps/pen/zPBEww?editors=1000" target="_blank">View demo on CodePen</a>
 				</p>
 
 
@@ -1232,27 +1258,28 @@ API
 				<h2 id="api">API</h2>
 
 				<p>
-					API 提供了一系列的方法来控制 fancyBox。
-					这些方法帮助你扩展插件，整合到其他的 web 应用中。
+					The fancyBox API offers a couple of methods to control fancyBox.
+
+					This gives you the ability to extend the plugin and to integrate it with other web application components.
 				</p>
 
-				<h3 id="core_methods">核心方法</h3>
+				<h3 id="core_methods">Core methods</h3>
 
 				<p>
-					操作实例的核心方法：
+					Core methods are methods which affect/handle instances:
 				</p>
 
 
-				<pre><code>// 只关闭当前 active 状态或者所有的 fancyBox 实例
+				<pre><code>// Close only the currently active or all fancyBox instances
 $.fancybox.close( true );
 
-// 打开 fancyBox
+// Open the fancyBox right away
 $.fancybox.open( items, opts, index );
 </code></pre>
 
 
 				<p>
-					通过 jQuery 将相册中的元素变为 jQuery 对象或者包含纯对象的数组，进行更多操作如创建定义点击事件。
+					Gallery items can be collection of jQuery objects or array containing plain objects. This can be used, for example, to create custom click event.
 				</p>
 
 				<pre><code>var $links = $('.fancybox');
@@ -1270,7 +1297,7 @@ $links.on('click', function() {
 
 
 				<p>
-					手动创建一组对象时，组内元素应该遵循以下规则：
+					When creating group objects manually, each item should follow this pattern:
 				</p>
 
 				<pre><code>{
@@ -1282,7 +1309,7 @@ $links.on('click', function() {
 
 
 				<p>
-					下面是一个通过 JavaScrip t打开相册的例子：
+					Example of opening image gallery programmatically:
 				</p>
 
 				<pre><code>$.fancybox.open([
@@ -1302,11 +1329,11 @@ $links.on('click', function() {
 	loop : false
 });</code></pre>
 				<p class="demo">
-					<a href="https://codepen.io/fancyapps/pen/WXxZMv?editors=1010" target="_blank">在 CodePen 上查看例子</a>
+					<a href="https://codepen.io/fancyapps/pen/WXxZMv?editors=1010" target="_blank">View demo on CodePen</a>
 				</p>
 
 				<p>
-					fancyBox 允许只传一个对象。打开行内元素的例子：
+					It is also possible to pass only one object. Example of opening inline content:
 				</p>
 
 				<pre><code>$.fancybox.open({
@@ -1320,25 +1347,25 @@ $links.on('click', function() {
 });
 </code></pre>
 				<p class="demo">
-					<a href="https://codepen.io/fancyapps/pen/mqEqgr?editors=1010" target="_blank">在 CodePen 上查看例子</a>
+					<a href="https://codepen.io/fancyapps/pen/mqEqgr?editors=1010" target="_blank">View demo on CodePen</a>
 				</p>
 
 				<p>
-					如果你想展示一些html文档（例如一段信息），你只需要使用很简单的一句语法。
-					fancyBox 建议使用一个wrapper 包裹你的内容。
+					If you wish to display some html content (for example, a message), then you can use a simpler syntax.
+					It is advised to use a wrapper around your content.
 				</p>
 
 				<pre><code>$.fancybox.open('&lt;div class=&quot;message&quot;&gt;&lt;h2&gt;Hello!&lt;/h2&gt;&lt;p&gt;You are awesome!&lt;/p&gt;&lt;/div&gt;');</code></pre>
 				<p class="demo">
-					<a href="https://codepen.io/fancyapps/pen/JOKOgP" target="_blank">在 CodePen 上查看例子</a>
+					<a href="https://codepen.io/fancyapps/pen/JOKOgP" target="_blank">View demo on CodePen</a>
 				</p>
 
 
 
-				<h3 id="instance_methods">实例的方法</h3>
+				<h3 id="instance_methods">Instance methods</h3>
 
 				<p>
-					你需要定义一个实例来使用实例的方法。
+					In order to use these methods, you need an instance of the plugin's object.
 				</p>
 
 				<pre><code>var instance = $.fancybox.open(
@@ -1346,13 +1373,13 @@ $links.on('click', function() {
 );</code></pre>
 
 				<p>
-					从当前 active 的实例中获取信息：
+					Get reference to currently active instance:
 				</p>
 
 				<pre><code>var instance = $.fancybox.getInstance();</code></pre>
 
 				<p>
-					回调函数的第一个参数返回实例信息：
+					The first argument of the callback is reference to instance:
 				</p>
 
 				<pre><code>$("[data-fancybox]").fancybox({
@@ -1361,68 +1388,68 @@ $links.on('click', function() {
 	}
 });</code></pre>
 				<p>
-					实例可以调用以下方法：
+					Once you have a reference to fancyBox instance the following methods are available:
 				</p>
 
 
-				<pre><code>// 跳到下一个相册元素
+				<pre><code>// Go to next gallery item
 instance.next( duration );
 
-//跳到上一个相册元素
+// Go to previous gallery item
 instance.previous( duration );
 
-// 调到选中的相册元素
+// Switch to selected gallery item
 instance.jumpTo( index, duration );
 
-// 检测当前尺寸是否小于实际尺寸
+// Check if current image dimensions are smaller than actual
 instance.isScaledDown();
 
-// 缩放到实际尺寸
+// Scale image to the actual size of the image
 instance.scaleToActual( x, y, duration );
 
-// 检测尺寸是否超过父元素
+// Check if image dimensions exceed parent element
 instance.canPan();
 
-// 缩放适应父元素尺寸
+// Scale image to fit inside parent element
 instance.scaleToFit( duration );
 
-// 更新滑块的内容和位置
+// Update position and content of all slides
 instance.update();
 
-// 更新侧边栏的位置， 缩放内容来适应
+// Update slide position and scale content to fit
 instance.updateSlide( slide );
 
-// 更新 infobar 的值， 导航按钮的状态， 和展示标题
+// Update infobar values, navigation button states and reveal caption
 instance.updateControls( force );
 
-// 在侧边栏中加载自定义内容
+// Load custom content into the slide
 instance.setContent( slide, content );
 
-// 在侧边栏中加载loading效果
+// Show loading icon inside the slide
 instance.showLoading( slide );
 
-// 从侧边栏中去除loading效果
+// Remove loading icon from the slide
 instance.hideLoading( slide );
 
-// 找到和把焦点放在第一个可以放置焦点的元素
+// Try to find and focus on the first focusable element
 instance.focus();
 
-// 激活当前 active 的实例，显示在最前面
+// Activates current instance, brings it to the front
 instance.activate();
 
-// 关闭实例
+// Close instance
 instance.close();
 </code></pre>
 
 
 				<p>
-					你可以这样使用：
+					You can also do something like this:
 				</p>
 
 				<pre><code>$.fancybox.getInstance().jumpTo(1);</code></pre>
 
 				<p>
-					或者：
+					or simply:
 				</p>
 
 				<pre><code>$.fancybox.getInstance('jumpTo', 1);</code></pre>
@@ -1430,28 +1457,28 @@ instance.close();
 
 
 
-				<h3 id="events">事件</h3>
+				<h3 id="events">Events</h3>
 
 				<p>
-					fancyBox 支持触发以下事件：
+					fancyBox fires several events:
 				</p>
 
-				<pre><code>beforeLoad   : 滑块的内容加载前
-afterLoad    : 滑块内容加载后
+				<pre><code>beforeLoad   : Before the content of a slide is being loaded
+afterLoad    : When the content of a slide is done loading
 
-beforeShow   : 打开动画开始前
-afterShow    : 内容或者动画加载完成
+beforeShow   : Before open animation starts
+afterShow    : When content is done loading and animating
 
-beforeClose  : 实例准备关闭前，染回`false`取消关闭
-afterClose   : 实例关闭后
+beforeClose  : Before the instance attempts to close. Return false to cancel the close.
+afterClose   : After instance has been closed
 
-onInit       : 实例初始化完成
-onActivate   : 实例active状态
-onDeactivate : 其他实例变为active状态</code></pre>
+onInit       : When instance has been initialized
+onActivate   : When instance is brought to front
+onDeactivate : When other instance has been activated</code></pre>
 
 
 				<p>
-					事件可以作为一个对象的函数属性，该对象作为参数传入到 fancyBox 初始化方法中：
+					Event callbacks can be set as function properties of the options object passed to fancyBox initialization function:
 				</p>
 
 				<pre><code>&lt;script type=&quot;text/javascript&quot;&gt;
@@ -1478,16 +1505,16 @@ onDeactivate : 其他实例变为active状态</code></pre>
 &lt;/script&gt;</code></pre>
 
 				<p>
-					每一个回调函数接收两个参数 —— 当前的 fancyBox 实例和当前的相册对象（如果它们存在）。
+					Each callback receives two parameters - current fancyBox instance and current gallery object, if exists.
 				</p>
 
 				<p>
-					fancyBox也支持触发所有的实例事件。
-					为了防止和其他的脚本产生干扰，这些事件命名为 <code>.fb</code> 结尾。
-					这些事件函数接收3个参数—事件（event），当前的 fancyBox 实例和当前的相册对象。
+					It is also possible to attach event handler for all instances.
+					To prevent interfering with other scripts, these events have been namespaced to <code>.fb</code>.
+					These handlers receive 3 parameters - event, current fancyBox instance and current gallery object.
 				</p>
 				<p>
-					下面例子是绑定 <code>afterShow</code> 事件：
+					Here is an example of binding to the <code>afterShow</code> event:
 				</p>
 
 				<pre><code>$(document).on('afterShow.fb', function( e, instance, slide ) {
@@ -1496,7 +1523,8 @@ onDeactivate : 其他实例变为active状态</code></pre>
 
 
 				<p>
-					如果你想阻止当前弹窗的关闭（例如在表单提交之后），可以使用 <code>beforeClose</code> 。只需要返回 <code>false</code> 即可：
+					If you wish to prevent closing of the modal (for example, after form submit), you can use <code>beforeClose</code>
+					callback. Simply return <code>false</code>:
 				</p>
 
 				<pre><code>beforeClose : function( instance, current, e ) {
@@ -1506,15 +1534,17 @@ onDeactivate : 其他实例变为active状态</code></pre>
 }
 </code></pre>
 
-				<h2 id="modules"> 模块</h2>
+				<h2 id="modules">Modules</h2>
 
 				<p>
-					fancyBox 代码被分成几个扩展核心功能的文件（模块）。
-					你可以通过去除不必要的模块来构建你自己的 fancyBox 版本。
-					如果需要，每一个模块有自己的 <code>js</code> 和 <code>css</code> 文件。
+					fancyBox code is split into several files (modules) that extend core functionality.
+					You can build your own fancyBox version by excluding unnecessary modules, if needed.
+					Each one has their own <code>js</code> and/or <code>css</code> files.
 				</p>
 
 				<p>
+					Some modules can be customized and controlled programmatically.
+					List of all possible options:
 				</p>
 
 				<pre><code>fullScreen : {
@@ -1558,7 +1588,7 @@ thumbs : {
 </code></pre>
 
 				<p>
-					开始时展示缩略图的例子：
+					Example (show thumbnails on start):
 				</p>
 
 				<pre><code>$('[data-fancybox="images"]').fancybox({
@@ -1567,27 +1597,28 @@ thumbs : {
 	}
 })</code></pre>
 				<p class="demo">
-					<a href="https://codepen.io/fancyapps/pen/QOEaWr?editors=1010" target="_blank">在 CodePen 上查看例子</a>
+					<a href="https://codepen.io/fancyapps/pen/QOEaWr?editors=1010" target="_blank">View demo on CodePen</a>
 				</p>
 
 				<p>
-					如果你查看了 fancyBox 的实例对象，你会发现一些key的值是大写的 —— 他们关联着其他模块的对象。当然，你也会发现 fancyBox 使用和 jQuery 一直的前缀 <code>$</code> 。
+					If you would inspect fancyBox instance object, you would find that same keys ar captialized - these are references for each module object.
+					Also, you would notice that fancyBox uses common naming convention to prefix jQuery objects with <code>$</code>.
 				</p>
 
 				<p>
-					下面例子为如何拿到缩略图栅格元素：
+					This is how you, for example, can access thumbnail grid element:
 				</p>
 
 				<pre><code>$.fancybox.getInstance().Thumbs.$grid</code></pre>
 
 				<p>
-					下面例子为如何调用切换缩略图的方法：
+					This example shows how to call method that toggles thumbnails:
 				</p>
 
 				<pre><code>$.fancybox.getInstance().Thumbs.toggle();</code></pre>
 
 				<p>
-					可使用的方法列表：
+					List of available methods:
 				</p>
 
 				<pre><code>Thumbs.focus()
@@ -1608,7 +1639,7 @@ SlideShow.toggle();
 </code></pre>
 
 				<p>
-					如果你想禁止 hash 模块，使用下面代码片段（引用 JS 之后）：
+					If you wish to disable hash module, use this snippet (after including JS file):
 				</p>
 
 				<pre><code>$.fancybox.defaults.hash = false;</code></pre>
@@ -1625,10 +1656,11 @@ FAQ
 
 				<h2>FAQ</h2>
 
-				<h3 id="faq-1">1.  打开、关闭导致固定定位的元素移动</h3>
+				<h3 id="faq-1">1. Opening/closing causes fixed element to jump</h3>
 
 				<p>
-					在固定定位的元素的class中加入 <code>compensate-for-scrollbar</code> 。例子为使用Bootstrap的navbar组件：
+					Simply add <code>compensate-for-scrollbar</code> CSS class to your fixed positioned elements.
+					Example of using Bootstrap navbar component:
 				</p>
 
 				<pre><code>&lt;nav class=&quot;navbar navbar-inverse navbar-fixed-top compensate-for-scrollbar&quot;&gt;
@@ -1638,12 +1670,13 @@ FAQ
 &lt;/nav&gt;</code></pre>
 
 				<p class="demo">
-					<a href="https://codepen.io/fancyapps/pen/xPOpZx?editors=1000" target="_blank">在 CodePen 上查看例子</a>
+					<a href="https://codepen.io/fancyapps/pen/xPOpZx?editors=1000" target="_blank">View demo on CodePen</a>
 				</p>
 
 				<p>
-					上个例子中，脚本会测量滚动条的宽度，创建 code>compensate-for-scrollbar</code> 样式并将宽度值复制到该样
-					式的 <code>margin-right</code> 属性。因此，如果你的元素宽度设置为 <code>width:100%</code> ，你应该同时使用 <code>left</code> 和 <code>right</code> 定位，例如：
+					The script measures width of the scrollbar and creates <code>compensate-for-scrollbar</code> CSS class
+					that uses this value for <code>margin-right</code> property.
+					Therefore, if your element has <code>width:100%</code>, you should positon it using <code>left</code> and <code>right</code> properties instead. Example:
 				</p>
 
 				<pre><code>.navbar {
@@ -1653,10 +1686,10 @@ FAQ
 	right: 0;
 }</code></pre>
 
-				<h3 id="faq-2">2. 如何自定义标题</h3>
+				<h3 id="faq-2">2. How to customize caption</h3>
 
 				<p>
-					你可以使用 <code>caption</code> 选项，它接收一个函数，并且被组内的每个元素调用。例子为增加图片下载链接：
+					You can use <code>caption</code> option that accepts a function and is called for each group element. Example of appending image download link:
 				</p>
 
 				<pre><code>$( '[data-fancybox=&quot;images&quot;]' ).fancybox({
@@ -1671,12 +1704,12 @@ FAQ
     }
 });</code></pre>
 				<p class="demo">
-					<a href="https://codepen.io/fancyapps/pen/jarYdo?editors=1010" target="_blank">在 CodePen 上查看例子</a>
+					<a href="https://codepen.io/fancyapps/pen/jarYdo?editors=1010" target="_blank">View demo on CodePen</a>
 				</p>
 
 
 				<p>
-					在标题右边增加当前图片的序号和图片总数：
+					Add current image index and image count (the total number of images in the gallery) right in the caption:
 				</p>
 
 				<pre><code>$( '[data-fancybox=&quot;images&quot;]' ).fancybox({
@@ -1688,13 +1721,13 @@ FAQ
     }
 });</code></pre>
 								<p class="demo">
-									<a href="https://codepen.io/fancyapps/pen/EbyQMQ?editors=1010" target="_blank">在 CodePen 上查看例子</a>
+									<a href="https://codepen.io/fancyapps/pen/EbyQMQ?editors=1010" target="_blank">View demo on CodePen</a>
 								</p>
 
 
 
 				<p>
-					在 <code>caption</code> 方法里面，<code>this</code> 指向被点击的元素。例子为使用不同的标题：
+					Inside <code>caption</code> method, <code>this</code> refers to the clicked element. Example of using different source for caption:
 				</p>
 
 				<pre><code>$( '[data-fancybox]' ).fancybox({
@@ -1703,14 +1736,14 @@ FAQ
 	}
 });</code></pre>
 				<p class="demo">
-					<a href="https://codepen.io/fancyapps/pen/EbyQzE?editors=1010" target="_blank">在 CodePen 上查看例子</a>
+					<a href="https://codepen.io/fancyapps/pen/EbyQzE?editors=1010" target="_blank">View demo on CodePen</a>
 				</p>
 
 
-				<h3 id="faq-3">3. 如何在tool上创建自定义按钮</h3>
+				<h3 id="faq-3">3. How to create custom button in the toolbar</h3>
 
 				<p>
-					创建可重复使用的按钮例子：
+					Example of creating reusable button:
 				</p>
 
 				<pre><code>// Create template for the button
@@ -1720,12 +1753,12 @@ $.fancybox.defaults.btnTpl.fb = '&lt;button data-fancybox-fb class=&quot;fancybo
     '&lt;/svg&gt;' +
 '&lt;/button&gt;';
 
-// 使用时间代理使按钮可点击
+// Make button clickable using event delegation
 $('body').on('click', '[data-fancybox-fb]', function() {
   window.open(&quot;https://www.facebook.com/sharer/sharer.php?u=&quot;+encodeURIComponent(window.location.href)+&quot;&amp;t=&quot;+encodeURIComponent(document.title), '','left=0,top=0,width=600,height=300,menubar=no,toolbar=no,resizable=yes,scrollbars=yes');
 });
 
-// 自定义按钮
+// Customize buttons
 $( '[data-fancybox=&quot;images&quot;]' ).fancybox({
   buttons : [
     'fb',
@@ -1734,34 +1767,37 @@ $( '[data-fancybox=&quot;images&quot;]' ).fancybox({
 });</code></pre>
 
 				<p class="demo">
-					<a href="https://codepen.io/fancyapps/pen/MOEXmJ" target="_blank">在 CodePen 上查看例子</a>
+					<a href="https://codepen.io/fancyapps/pen/MOEXmJ" target="_blank">View demo on CodePen</a>
 				</p>
 
-				<h3 id="faq-4">4. 如何重置缩略图栅格的位置</h3>
+				<h3 id="faq-4">4. How to reposition thumbnail grid</h3>
 
 				<p>
-					这里没有 JS 选项去改变缩略图栅格的位置，但是 fancyBox 允许你使用 CSS 来改变每个块元素的位置或者尺寸（例如：内容区域，标题或者缩略图栅格）。这使你很自由的改变弹框窗口的外观和样式。
+					There is currenty no JS option to change thumbnail grid position.
+					But fancyBox is designed so that you can use CSS to change position or dimension for each block
+					(e.g., content area, caption or thumbnail grid).
+					This gives you freedom to completely change the look and feel of the modal window, if needed.
 
-					<a href="https://codepen.io/fancyapps/pen/RjRQzm" target="_blank">在 CodePen 上查看例子</a>
+					<a href="https://codepen.io/fancyapps/pen/RjRQzm" target="_blank">View demo on CodePen</a>
 				</p>
 
-				<h3 id="faq-5">5. 如何禁止touch操作</h3>
+				<h3 id="faq-5">5. How to disable touch gestures/swiping</h3>
 
 				<p>
-					当你想内容可选择或者可点击，有两个选项：
+					When you want to make your content selectable or clickable, you have two options:
 				</p>
 
 				<ul>
 					<li>
-						 设置 <code>touch:false</code> 完全禁止 touch 操作
+						 disable touch gestures completely by setting <code>touch:false</code>
 					</li>
 					<li>
-						添加 <code>data-selectable="true"</code> 属性到你的 html 元素
+						add <code>data-selectable="true"</code> attribute to your html element
 					</li>
 				</ul>
 
 				<p>
-					<a href="https://codepen.io/fancyapps/pen/OOXxLa" target="_blank">在 CodePen 上查看例子</a>
+					<a href="https://codepen.io/fancyapps/pen/OOXxLa" target="_blank">View demo on CodePen</a>
 				</p>
 
 
